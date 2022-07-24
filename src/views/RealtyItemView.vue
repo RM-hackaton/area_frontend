@@ -1,18 +1,29 @@
 <script setup>
 import ItemNavigation from '@/components/ItemNavigation.vue'
-import {ref} from 'vue'
+import axios from 'axios'
+import {ref, onMounted} from 'vue'
+import {useRoute} from 'vue-router'
 
 const delNotification = i => {
 	return notifications.value.splice(i, 1)
 }
+
+let home = ref({})
+
+const route = useRoute()
+onMounted(() => {
+	axios.get('http://194.67.121.186/api/commercials/?limit=1&offset=' + (route.params.id - 1))
+		.then(response => {
+			home.value = response.data[0]
+		})
+})
 
 </script>
 <template>
 
 <section class="min-h-screen">
 
-		
-		<ItemNavigation title="Офис, 200м² название текст"></ItemNavigation>
+		<ItemNavigation :title="home.name"></ItemNavigation>
 	
 		<div class="list mt-4">
 			<div class="block">
@@ -21,12 +32,12 @@ const delNotification = i => {
 						<img v-for="i in 4" :key="i" src="@/assets/img/realty_example.png" alt="">
 					</div>
 					<div class="price flex items-center my-2">
-						<h3 class="price_full text-xl font-bold">1 150 000 руб.</h3>
-						<h3 class="price_full font-medium opacity-50 ml-3">72 000 руб. / м2</h3>
+						<h3 class="price_full text-xl font-bold">{{ home.price }}</h3>
+						<h3 class="price_full font-medium opacity-50 ml-3">{{ home.price_meter }} руб. / м2</h3>
 					</div>
 					<div class="location">Краснодарский край, Краснодар, микрорайон Квартальный, ул. Цоколя, 301</div>
 
-					<p class="text-lg my-4 text-gray-400 text-center">4 этаж, Комфорт-класс</p>
+					<p class="text-lg my-4 text-gray-400 text-center">{{ home.floor }} этаж, Комфорт-класс</p>
 
 
 					

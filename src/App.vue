@@ -48,7 +48,7 @@ router.afterEach(route => {
 		</div>
 		<div :class="{hidden: !menuOpened}" class="px-9 h-full flex items-center">
 			<ul class="flex flex-col w-full space-y-9">
-				<li v-for="menuItem in menuItems" class="uppercase text-2xl"><RouterLink class="font-black" :to="menuItem.link">{{menuItem.title}}</RouterLink></li>
+				<li v-for="menuItem in menuItems" class="uppercase text-2xl"><RouterLink class="font-black" @click="menuOpened = false" :to="menuItem.link">{{menuItem.title}}</RouterLink></li>
 			</ul>
 		</div>
 	</header>

@@ -1,10 +1,19 @@
 <script setup>
 import SectionNavigation from '@/components/SectionNavigation.vue'
-import {ref} from 'vue'
+import {ref, onMounted} from 'vue'
+import axios from 'axios'
 
 const delNotification = i => {
 	return notifications.value.splice(i, 1)
 }
+
+const marketItems = ref([])
+onMounted(() => {
+axios.get('http://89.108.70.47/marketplace/')
+	.then(response => {
+		marketItems.value = response.data
+	})
+})
 
 </script>
 <template>
@@ -27,12 +36,12 @@ const delNotification = i => {
 			<hr class="my-10" style="color: rgba(0,0,0,.1)">
 			
 			<div class="similar flex flex-wrap justify-between">
-				<div v-for="i in 10" class="block mb-10" style="width: 48%">
-					<h4 class="font-bold text-lg leading-0">Пример услуги с фото</h4>
-					<img class="my-2" src="@/assets/img/realty_example.png" alt="">
-					<h5 class="font-bold text-xl">2000 руб.</h5>
+				<a target="_blank" :href="marketItem.url" v-for="marketItem in marketItems" class="block mb-10" style="width: 48%">
+					<h4 class="font-bold text-lg leading-0">{{ marketItem.name }}</h4>
+					<img class="my-2 w-16" :src="'http://89.108.70.47' + marketItem.image" alt="">
+					<p class="font-bold text-lg">2000 руб.</p>
 
-				</div>
+				</a>
 
 			</div>
 
