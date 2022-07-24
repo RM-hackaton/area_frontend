@@ -11,6 +11,12 @@ const router = createRouter({
       component: HomeView,
     },
     {
+      path: "/about",
+      name: "about",
+			meta: { layout: 'primary-white'},
+      component: () => import(/*webpackChunkName: 'about'*/ "../views/AboutView.vue"),
+    },
+    {
       path: "/register",
       name: "register",
 			meta: { layout: 'transparent'},
