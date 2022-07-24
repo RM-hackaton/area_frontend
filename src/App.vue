@@ -33,7 +33,7 @@ router.afterEach(route => {
 		<div class="z-50 headerCap flex justify-between">
 			<h2 class="logo uppercase text-xl"><RouterLink class="font-black" to="/">Area</RouterLink></h2>
 			<div class="tools flex">
-					<RouterLink to="/profile" class="hidden mr-3.5">
+					<RouterLink @click="menuOpened = false" to="/profile" class="mr-3.5">
 						<svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M19.1679 20.4371C18.5106 16.015 16.796 11.6573 12.7509 10.2599C14.323 9.28082 15.3664 7.53865 15.3664 5.54827C15.3664 2.48684 12.8842 0 9.81818 0C6.75215 0 4.26991 2.48224 4.26991 5.54827C4.26991 7.53406 5.31797 9.28082 6.88546 10.2599C2.84032 11.6573 1.12114 16.015 0.468405 20.4371C0.344293 21.2599 0.992434 22 1.82444 22H17.8027C18.6439 22 19.2921 21.2599 19.1679 20.4371ZM6.36143 5.54827C6.36143 3.64062 7.91512 2.08692 9.82277 2.08692C10.2778 2.08692 10.6502 2.45926 10.6502 2.91433C10.6502 3.36941 10.2778 3.74175 9.82277 3.74175C8.82528 3.74175 8.01625 4.55077 8.01625 5.54827C8.01625 6.00334 7.64392 6.37568 7.18884 6.37568C6.72917 6.37568 6.36143 6.00794 6.36143 5.54827Z" :fill="menuWhite || menuOpened ? '#ffffff' : '#222222'"/>
 						</svg>
@@ -54,7 +54,7 @@ router.afterEach(route => {
 	</header>
 
 	<Transition name="fade">
-		<div v-if="false && loading" class="loader fixed top-0 left-0 bg-white w-screen h-screen z-50 flex justify-center items-center">
+		<div v-if="loading" class="loader fixed top-0 left-0 bg-white w-screen h-screen z-50 flex justify-center items-center">
 			<img src="@/assets/img/loader3.gif" alt="">
 		</div>
 	</Transition>
