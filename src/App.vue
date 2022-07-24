@@ -9,7 +9,7 @@ let menuWhite = ref(false)
 
 const menuItems = reactive([
 	{title: "Главная", link: "/"},
-	{title: "О сервисе", link: "/#about"},
+	{title: "О сервисе", link: "/about"},
 	{title: "Недвижимость", link: "/realty"},
 	{title: "Маркетплейс", link: "/market"},
 ])
@@ -88,6 +88,7 @@ router.afterEach(route => {
 				</div>
 		</section>
 	</div>
+	<footer class="bg-white p-4 flex justify-center"><p class="mr-4 font-bold text-lg text-dark">Made in </p><img style="width: 100px" src="@/assets/img/aqua-logo.svg" alt=""></footer>
 
 </template>
 
