@@ -15,16 +15,11 @@ const delNotification = i => {
 <template>
 	<div class="px-4">
 
-<div class="flex space-x-4 justify-between w-full mr-4 my-4">
-	<RouterLink to="/profile" class="rounded-md w-1/2 text-center bg-white text-dark text-lg py-2 font-semibold">общие</RouterLink>
-	<RouterLink to="/profile/realty" class="rounded-md w-1/2 bg-transparent border border-white text-center text-white text-lg py-2 font-semibold">моя недвижимость</RouterLink>
-			</div>
-
 	<section class="bg-primary min-h-screen">
 		<SectionNavigation :navBlocks="[
 			{title: 'главная', link: '/'},
-			{title: 'редактировать профиль'}
-		]" title="Редактировать профиль" :white="true"></SectionNavigation>
+			{title: 'заполните профиль'}
+		]" title="Заполните профиль" :white="true"></SectionNavigation>
 
 
 	<div class="notifications">
@@ -66,11 +61,11 @@ const delNotification = i => {
 
 <section class="py-10 space-y-5">
 		<h2 class="text-2xl font-extrabold text-white">Заполните реквизиты для оформления сделок</h2>
-		<input class="inp inp-light w-full"  placeholder="ИНН" type="text">
-		<input class="inp inp-light w-full"  placeholder="КПП" type="text">
+		<input class="inp inp-light w-full" placeholder="ИНН" type="text">
+		<input class="inp inp-light w-full" placeholder="КПП" type="text">
 		<input class="inp inp-light w-full" placeholder="Расчётный счёт" type="text">
-		<input class="inp inp-light w-full"  placeholder="БИК" type="text">
-		<RouterLink class="btn__white" to="/realty">обновить</RouterLink>
+		<input class="inp inp-light w-full" placeholder="БИК" type="text">
+		<RouterLink class="btn__white" to="/realty">сохранить изменения</RouterLink>
 	</section>
 
 	</section>
