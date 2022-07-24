@@ -20,7 +20,7 @@ console.log(props)
 		<input class="inp w-full" placeholder="введите пароль" type="password">
 		<input class="inp w-full" placeholder="повторите пароль" type="password">-->
 		<input v-for="(field, k) in props.fields" class="inp w-full" :placeholder="field.placeholder" :type="field.type">
-		<RouterLink class="btn__primary" to="/profile">{{submitText}}</RouterLink>
+		<RouterLink class="btn__primary" to="/profile/start">{{submitText}}</RouterLink>
 	</form>
 </template>
 

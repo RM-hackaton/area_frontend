@@ -35,6 +35,12 @@
 	display: none;
 }
 
+.btn__white {
+	@apply btn__primary;
+	color: #222;
+	background-color: #fff;
+}
+
 .inp {
 	@apply text-lg backdrop-blur-sm text-white p-4 outline-none font-semibold text-center rounded-md;
 	background: linear-gradient(93.09deg, rgba(112, 112, 112, 0.5) 17.23%, rgba(255, 255, 255, 0.1) 92.03%);

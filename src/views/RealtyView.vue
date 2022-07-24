@@ -1,10 +1,13 @@
 <script setup>
 import SectionNavigation from '@/components/SectionNavigation.vue'
-import {ref} from 'vue'
+import {ref, onMounted} from 'vue'
+import axios from 'axios'
 
 const delNotification = i => {
 	return notifications.value.splice(i, 1)
 }
+
+
 
 </script>
 <template>
@@ -24,7 +27,6 @@ const delNotification = i => {
 				<button class="rounded-md w-1/2 bg-primary text-white text-lg py-2 font-semibold">снять</button>
 				<button class="rounded-md w-1/2 bg-transparent border border-primary text-dark text-lg py-2 font-semibold">снять</button>
 			</div>
-			<img src="@/assets/img/icons/filter.svg" alt="">
 		</div>
 
 

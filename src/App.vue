@@ -69,7 +69,7 @@ router.afterEach(route => {
 	</div>
 	<div v-else-if="route.meta.layout == 'primary-white'">
 		<section class="primary-area bg-primary" style="padding-top: 60px">
-			<div class="container px-4">
+			<div class="">
 				<RouterView />
 			</div>
 		</section>
@@ -83,7 +83,7 @@ router.afterEach(route => {
 	</div>
 	<div v-else>
 		<section class="primary-area bg-primary" style="padding-top: 60px">
-				<div class="container px-4">
+				<div class="">
 					<RouterView />
 				</div>
 		</section>
