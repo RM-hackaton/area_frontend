@@ -41,7 +41,7 @@ axios.get('http://194.67.121.186/api/commercials/?limit=20&offset=0')
 		<div class="list mt-4">
 
 			<div v-for="item in items" class="block mb-10">
-				<RouterLink to="/realty/item">
+				<RouterLink :to="'/realty/' + item.id">
 					<h2 class="mb-2 font-bold text-2xl">{{ item.name }}</h2>
 					<div class="images flex space-x-4 max-w-full overflow-auto">
 						<img v-for="i in 1" :key="i" class="w-full w-80 mx-auto" :src="item.plan" alt="">

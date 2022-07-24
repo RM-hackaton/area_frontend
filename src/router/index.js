@@ -53,7 +53,7 @@ const router = createRouter({
       component:  () => import(/*webpackChunkName: 'realty'*/ "../views/RealtyView.vue"),
     },
     {
-      path: "/realty/item",
+			path: "/realty/:id",
       name: "realty_item",
 			meta: { layout: 'white'},
       component:  () => import(/*webpackChunkName: 'realty_item'*/ "../views/RealtyItemView.vue"),
