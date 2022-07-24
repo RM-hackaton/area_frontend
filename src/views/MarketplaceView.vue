@@ -16,9 +16,11 @@ const delNotification = i => {
 			{title: 'главная', link: '/'},
 			{title: 'маркетплейс'}
 		]" title="Маркетплейс услуг"></SectionNavigation>
-<div class="flex space-x-4 justify-between w-full my-3">
-				<button class="rounded-md w-1/2 bg-primary text-white text-lg py-2 font-semibold">снять</button>
-				<button class="rounded-md w-1/2 bg-transparent border border-primary text-dark text-lg py-2 font-semibold">снять</button>
+<div class="flex flex-wrap justify-between w-full my-3">
+				<button class="rounded-md mb-2 w-1/2 bg-primary text-white text-lg py-2 font-semibold">демонтаж</button>
+				<button class="rounded-md mb-2 w-1/2 bg-transparent border border-primary text-dark text-lg py-2 font-semibold">биометрия</button>
+				<button class="rounded-md w-1/2 bg-transparent border border-primary text-dark text-lg py-2 font-semibold">юр. услуги</button>
+				<button class="rounded-md w-1/2 bg-transparent border border-primary text-dark text-lg py-2 font-semibold">промоутеры</button>
 			</div>
 
 	
