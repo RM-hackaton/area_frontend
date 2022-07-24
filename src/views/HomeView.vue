@@ -15,7 +15,7 @@ const sectionOpened = ref(false)
 				<div class="text-center px-4 h-full space-y-16">
 					<h1 class="pt-36 m-auto text-center leading-[50px] font-black text-4xl text-white uppercase">Арендуйте помещения онлайн</h1>
 					<RouterLink to="/register" class="btn">получить доступ</RouterLink>
-					<div @click="sectionOpened = true" to="#" class="block text-white font-semibold text-center text-lg" href="#">узнать больше</div>
+					<div to="#" class="block text-white font-semibold text-center text-lg" href="#">узнать больше</div>
 				</div>
 			</section>
 	</div>
