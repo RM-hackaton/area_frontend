@@ -1,0 +1,13 @@
+@import "./base.css";
+* {
+	box-sizing: border-box;
+}
+#app {
+  font-weight: normal;
+}
+
+
+body {
+	max-width: 500px;
+	margin: 0 auto;
+}

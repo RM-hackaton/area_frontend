@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn {
+	@apply text-lg text-white font-extrabold p-4 w-full rounded-md backdrop-blur-sm shadow relative text-center;
+	background-color: rgba(255,255,255,.3);
+	display: block;
+}
+.btn::before {
+	content: '';
+	position: absolute;
+	right: 14px;
+	top: 0;
+	width: 175px;
+	height: 3px;
+	background-color: #fff;
+}
+.btn::after {
+	content: '';
+	position: absolute;
+	left: 14px;
+	right: 0;
+	bottom: 0;
+	width: 175px;
+	height: 3px;
+	background-color: #fff;
+}
+
+.btn__primary {
+	@apply btn;
+	@apply bg-primary;
+}
+.btn__primary::before, .btn__primary::after {
+	display: none;
+}
+
+.inp {
+	@apply text-lg backdrop-blur-sm text-white p-4 outline-none font-semibold text-center rounded-md;
+	background: linear-gradient(93.09deg, rgba(112, 112, 112, 0.5) 17.23%, rgba(255, 255, 255, 0.1) 92.03%);
+	border: 2px solid rgba(255,255,255,.1);
+	box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.15);
+}
+.inp::-webkit-input-placeholder {
+	color: #fff;
+}
+
+.inp-light {
+	background: rgba(255,255,255,.1);
+}
+
+.container {
+	@apply px-4;
+}
